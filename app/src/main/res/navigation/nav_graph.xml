@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/genres">
+
+    <fragment
+        android:id="@+id/genres"
+        android:name="com.canh.coroutinevsrx.ui.genres.GenresFragment"
+        tools:layout="@layout/fragment_genres">
+        <action
+            android:id="@+id/actionGenresToMovies"
+            app:destination="@id/movies" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/movies"
+        android:name="com.canh.coroutinevsrx.ui.movies.MoviesFragment"
+        tools:layout="@layout/fragment_movies" />
+</navigation>
