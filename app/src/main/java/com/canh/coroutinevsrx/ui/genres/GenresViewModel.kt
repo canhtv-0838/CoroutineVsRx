@@ -15,7 +15,7 @@ class GenresViewModel(private val repository: MovieRepository) : BaseViewModel()
     var genres = MutableLiveData<List<Genre>>()
 
     fun getGenreMovieList() {
-        viewModelScope.launch(Dispatchers.Default) {
+        viewModelScope.launch(Dispatchers.IO) {
             val genresResponse = repository.getGenreMovieList()
             withContext(Dispatchers.Main) {
                 genres.value = genresResponse.genres

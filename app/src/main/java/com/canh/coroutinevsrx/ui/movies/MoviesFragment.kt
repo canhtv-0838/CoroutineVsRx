@@ -44,7 +44,6 @@ class MoviesFragment : BaseFragment<FragmentMoviesBinding, MoviesViewModel>() {
 
             movies.observe(viewLifecycleOwner, Observer {
                 it?.let {
-                    log("$it")
                     movieAdapter.submitList(it)
                 }
             })
